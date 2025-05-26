@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane fx:controller="controller.DashboardController"
+            xmlns:fx="http://javafx.com/fxml" 
+            stylesheets="@../css/styles.css">
+
+    <!-- Barre de titre -->
+    <top>
+        <Label text="Gestion des Événements"
+               styleClass="header-label"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <!-- Centre : liste des événements -->
+    <center>
+        <VBox spacing="10.0" padding="10.0">
+            <ListView fx:id="evenementListView" prefHeight="300"/>
+        </VBox>
+    </center>
+
+    <!-- Bas : boutons d’action -->
+    <bottom>
+        <HBox spacing="10.0" padding="10.0" alignment="CENTER">
+            <Button text="Ajouter un événement" onAction="#onAjouterEvenement"/>
+            <Button text="Inscrire un participant" onAction="#onInscrireParticipant"/>
+        </HBox>
+    </bottom>
+
+    <!-- Droite : zone de notifications -->
+    <right>
+        <VBox spacing="10.0" padding="10.0">
+            <Label text="Notifications" styleClass="section-label"/>
+            <TextArea fx:id="notificationArea" prefWidth="250" wrapText="true" editable="false"/>
+        </VBox>
+    </right>
+
+</BorderPane>
+

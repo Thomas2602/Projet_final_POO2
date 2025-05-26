@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.EvenementFormController"
+            prefWidth="500" prefHeight="400"
+            stylesheets="@../css/styles.css">
+    
+    <VBox spacing="10" alignment="CENTER" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        
+        <Label text="Ajouter un Événement" styleClass="header-label"/>
+
+        <GridPane hgap="10" vgap="10">
+            <Label text="ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="idField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            
+            <Label text="Nom:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="nomField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            
+            <Label text="Lieu:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="lieuField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            
+            <Label text="Date (yyyy-MM-dd HH:mm):" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="dateField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            
+            <Label text="Capacité max:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <TextField fx:id="capaciteField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+            
+            <Label text="Type:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="typeCombo" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+            
+            <Label fx:id="labelSpecifique1" text="Champ 1:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+            <TextField fx:id="champSpecifique1" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+            
+            <Label fx:id="labelSpecifique2" text="Champ 2:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+            <TextField fx:id="champSpecifique2" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <Button fx:id="enregistrerButton" text="Enregistrer" onAction="#onEnregistrer" styleClass="button"/>
+    </VBox>
+
+</AnchorPane>
+
